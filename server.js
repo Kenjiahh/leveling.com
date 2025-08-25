@@ -1794,15 +1794,5 @@ server.on('error', (error) => {
 });
 
 module.exports = app;
-const helmet = require("helmet");
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        defaultSrc: ["'self'"],
-        scriptSrc: ["'self'"],
-        scriptSrcAttr: ["'unsafe-inline'"] // Hanya untuk inline attributes
-      },
-    },
-  })
-);
+
+
